@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <img src="image/logo.png" class="img-fluid" alt="Logo">
+                </div>
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <input class="form-control border border-warning" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-warning" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div style="font-size: 2rem;">
+                                        <i class="fa-solid fa-phone" style="color: orange;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <strong>Contact</strong> <br>
+                                    0868387111
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div style="font-size: 2rem;">
+                                        <i class="fa-solid fa-envelope" style="color: orange;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <strong>Email</strong> <br>
+                                    trang@gmail.com
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <section style="background-color: bisque;">
+        <div class="container">
+            <div class="row">
+                <!-- Shop by Category Dropdown -->
+                <div class="col-md-3 col-sm-6 text-dark d-flex align-items-center">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shop by Category
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Cat</a>
+                        <a class="dropdown-item" href="#">Dog</a>
+                        <a class="dropdown-item" href="#">Bird</a>
+                    </div>
+                </div>
+                <!--  Main Navigation Menu -->
+                <div class="col-md-6 col-sm-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand d-none" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="#">Shop</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark" href="#" id="pagesDropdown"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Pages
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                        <a class="dropdown-item" href="#">About Us</a>
+                                        <a class="dropdown-item" href="#">Wishlist</a>
+                                        <a class="dropdown-item" href="#">Checkout</a>
+                                        <a class="dropdown-item" href="#">Cart</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="#">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="#">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="#">Others</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled text-dark font-weight-bold" aria-disabled="true">GET PRO</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- User Icons -->
+                <div class="col-md-3 col-sm-6 d-flex justify-content-between">
+                    <div class="d-flex justify-content-between">
+                        <a href="" class="position-relative d-flex align-items-center mx-3">
+                            <span style="font-size: 1.5rem;color: orange;">
+                                <i class="fa-regular fa-heart"></i>
+                            </span>
+                        </a>
+                        <a href="" class="position-relative d-flex align-items-center mx-3">
+                            <i class="fa-solid fa-cart-shopping" style="font-size: 1.5rem;color: orange;"></i>
+                        </a>
+                        <a href="./login.html" class="position-relative d-flex align-items-center mx-3">
+                            <i class="fa-regular fa-user" style="font-size: 1.5rem;color: orange;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider -->
+    <section class="slide-section my-2">
+        <div class="container">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="image/slider1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>BEST DESTINATION FOR YOUR PETS</h5>
+                            <p>Sale of 10 - 20 %</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/slider2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>BEST DESTINATION FOR YOUR PETS</h5>
+                            <p>Promotions for VIP members</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/slider3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>BEST DESTINATION FOR YOUR PETS</h5>
+                            <p>Buy now to receive an exclusive voucher</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories">
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                    <a href="#" style="text-decoration: none;">
+                        <i class="fa-solid fa-bowl-food" style="font-size: 4rem; color: orange;"></i>
+                        <h5 class="text-dark">Foodies</h5>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                    <a href="#" style="text-decoration: none;">
+                        <i class="fa-solid fa-dove" style="font-size: 4rem; color: orange;"></i>
+                        <h5 class="text-dark">Bird Shop</h5>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                    <a href="#" style="text-decoration: none;">
+                        <i class="fa-solid fa-cat" style="font-size: 4rem; color: orange;"></i>
+                        <h5 class="text-dark">Cat Shop</h5>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                    <a href="#" style="text-decoration: none;">
+                        <i class="fa-solid fa-dog" style="font-size: 4rem; color: orange;"></i>
+                        <h5 class="text-dark">Dog Shop</h5>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+                    <a href="#" style="text-decoration: none;">
+                        <i class="fa-solid fa-fish-fins" style="font-size: 4rem; color: orange;"></i>
+                        <h5 class="text-dark">Fish Shop</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product -->
+    <section id="foodies" class="my-5">
+        <div class="container">
+            <div class="section-header d-md-flex justify-content-between align-items-center">
+                <h1 class=" font-weight-normal">Pet Foodies</h1>
+                <div class="mb-4 mb-md-0">
+                    <p class="m-0">
+                        <button class="filter-button mr-4 active" data-filter="*">ALL</button>
+                        <button class="filter-button mr-4" data-filter=".cat">CAT</button>
+                        <button class="filter-button mr-4" data-filter=".dog">DOG</button>
+                        <button class="filter-button mr-4" data-filter=".bird">BIRD</button>
+                    </p>
+                </div>
+                <div>
+                    <a href="#" class="btn btn-outline-warning btn-lg fs-6 rounded-1">
+                        SHOP NOW
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row isotope-container">
+                    <!-- Product 1 -->
+                    <div class="col-12 col-md-6 col-lg-3 my-4">
+                        <div class="position-relative rounded">
+                            <img src="image/c1.jpg" alt="cat" class="img-fluid rounded">
+                        </div>
+                        <div class="p-0 text-center">
+                            <h3 class="pt-4 m-0">Cat Dry food</h3>
+                        </div>
+                        <div class="text-center">
+                            <span class="rating secondary-font">
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                            </span>
+                            <h3 class="secondary-font" style="color: chocolate;">$20.00</h3>
+                        </div>
+                        <div class="d-flex flex-wrap mt-3 justify-content-center">
+                            <a href="#" class="btn-cart btn-outline-warning me-3 px-4 pt-3 pb-3"
+                                style="text-decoration: none;">
+                                ADD TO CART
+                            </a>
+                            <a href="#" class="btn-wishlist btn-outline-warning px-4 pt-3 position-relative">
+                                <i class="fa-solid fa-heart"></i>
+                                <span class="wishlist-border"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="col-12 col-md-6 col-lg-3 my-4">
+                        <div class="position-relative rounded">
+                            <img src="image/d1.jpg" alt="dog" class="img-fluid rounded">
+                        </div>
+                        <div class="p-0 text-center">
+                            <h3 class="pt-4 m-0">Grain-free</h3>
+                        </div>
+                        <div class="text-center">
+                            <span class="rating secondary-font">
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                            </span>
+                            <h3 class="secondary-font" style="color: chocolate;">$20.00</h3>
+                        </div>
+                        <div class="d-flex flex-wrap mt-3 justify-content-center">
+                            <a href="#" class="btn-cart btn-outline-warning me-3 px-4 pt-3 pb-3"
+                                style="text-decoration: none;">
+                                ADD TO CART
+                            </a>
+                            <a href="#" class="btn-wishlist btn-outline-warning px-4 pt-3 position-relative">
+                                <i class="fa-solid fa-heart"></i>
+                                <span class="wishlist-border"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="col-12 col-md-6 col-lg-3 my-4">
+                        <div class="position-relative rounded">
+                            <img src="image/c2.jpg" alt="cat" class="img-fluid rounded">
+                        </div>
+                        <div class="p-0 text-center">
+                            <h3 class="pt-4 m-0">Raw food</h3>
+                        </div>
+                        <div class="text-center">
+                            <span class="rating secondary-font">
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                            </span>
+                            <h3 class="secondary-font" style="color: chocolate;">$20.00</h3>
+                        </div>
+                        <div class="d-flex flex-wrap mt-3 justify-content-center">
+                            <a href="#" class="btn-cart btn-outline-warning me-3 px-4 pt-3 pb-3"
+                                style="text-decoration: none;">
+                                ADD TO CART
+                            </a>
+                            <a href="#" class="btn-wishlist btn-outline-warning px-4 pt-3 position-relative">
+                                <i class="fa-solid fa-heart"></i>
+                                <span class="wishlist-border"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="col-12 col-md-6 col-lg-3 my-4">
+                        <div class="position-relative rounded">
+                            <img src="image/b1.jpg" alt="bird" class="img-fluid rounded">
+                        </div>
+                        <div class="p-0 text-center">
+                            <h3 class="pt-4 m-0">Candy</h3>
+                        </div>
+                        <div class="text-center">
+                            <span class="rating secondary-font">
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                            </span>
+                            <h3 class="secondary-font" style="color: chocolate;">$20.00</h3>
+                        </div>
+                        <div class="d-flex flex-wrap mt-3 justify-content-center">
+                            <a href="#" class="btn-cart btn-outline-warning me-3 px-4 pt-3 pb-3"
+                                style="text-decoration: none;">
+                                ADD TO CART
+                            </a>
+                            <a href="#" class="btn-wishlist btn-outline-warning px-4 pt-3 position-relative">
+                                <i class="fa-solid fa-heart"></i>
+                                <span class="wishlist-border"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="col-12 col-md-6 col-lg-3 my-4">
+                        <div class="position-relative rounded">
+                            <img src="image/d2.jpg" alt="dog" class="img-fluid rounded">
+                        </div>
+                        <div class="p-0 text-center">
+                            <h3 class="pt-4 m-0">Cake</h3>
+                        </div>
+                        <div class="text-center">
+                            <span class="rating secondary-font">
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                            </span>
+                            <h3 class="secondary-font" style="color: chocolate;">$20.00</h3>
+                        </div>
+                        <div class="d-flex flex-wrap mt-3 justify-content-center">
+                            <a href="#" class="btn-cart btn-outline-warning me-3 px-4 pt-3 pb-3"
+                                style="text-decoration: none;">
+                                ADD TO CART
+                            </a>
+                            <a href="#" class="btn-wishlist btn-outline-warning px-4 pt-3 position-relative">
+                                <i class="fa-solid fa-heart"></i>
+                                <span class="wishlist-border"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="col-12 col-md-6 col-lg-3 my-4">
+                        <div class="position-relative rounded">
+                            <img src="image/b2.jpg" alt="bird" class="img-fluid rounded">
+                        </div>
+                        <div class="p-0 text-center">
+                            <h3 class="pt-4 m-0">Pulsitos</h3>
+                        </div>
+                        <div class="text-center">
+                            <span class="rating secondary-font">
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                            </span>
+                            <h3 class="secondary-font" style="color: chocolate;">$20.00</h3>
+                        </div>
+                        <div class="d-flex flex-wrap mt-3 justify-content-center">
+                            <a href="#" class="btn-cart btn-outline-warning me-3 px-4 pt-3 pb-3"
+                                style="text-decoration: none;">
+                                ADD TO CART
+                            </a>
+                            <a href="#" class="btn-wishlist btn-outline-warning px-4 pt-3 position-relative">
+                                <i class="fa-solid fa-heart"></i>
+                                <span class="wishlist-border"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Product 7 -->
+                    <div class="col-12 col-md-6 col-lg-3 my-4">
+                        <div class="position-relative rounded">
+                            <img src="image/d3.jpg" alt="dog" class="img-fluid rounded">
+                        </div>
+                        <div class="p-0 text-center">
+                            <h3 class="pt-4 m-0">Semi-moist </h3>
+                        </div>
+                        <div class="text-center">
+                            <span class="rating secondary-font">
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                            </span>
+                            <h3 class="secondary-font" style="color: chocolate;">$20.00</h3>
+                        </div>
+                        <div class="d-flex flex-wrap mt-3 justify-content-center">
+                            <a href="#" class="btn-cart btn-outline-warning me-3 px-4 pt-3 pb-3"
+                                style="text-decoration: none;">
+                                ADD TO CART
+                            </a>
+                            <a href="#" class="btn-wishlist btn-outline-warning px-4 pt-3 position-relative">
+                                <i class="fa-solid fa-heart"></i>
+                                <span class="wishlist-border"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Product 8 -->
+                    <div class="col-12 col-md-6 col-lg-3 my-4">
+                        <div class="position-relative rounded">
+                            <img src="image/d4.jpg" alt="dog" class="img-fluid rounded">
+                        </div>
+                        <div class="p-0 text-center">
+                            <h3 class="pt-4 m-0">Organic</h3>
+                        </div>
+                        <div class="text-center">
+                            <span class="rating secondary-font">
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                                <i class="fa-solid fa-star" style="color: chocolate;"></i>
+                            </span>
+                            <h3 class="secondary-font" style="color: chocolate;">$20.00</h3>
+                        </div>
+                        <div class="d-flex flex-wrap mt-3 justify-content-center">
+                            <a href="#" class="btn-cart btn-outline-warning me-3 px-4 pt-3 pb-3"
+                                style="text-decoration: none;">
+                                ADD TO CART
+                            </a>
+                            <a href="#" class="btn-wishlist btn-outline-warning px-4 pt-3 position-relative">
+                                <i class="fa-solid fa-heart"></i>
+                                <span class="wishlist-border"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer text-dark py-4 my-3" style="background-color: bisque;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-menu">
+                        <img src="image/logo2.png" class="img-fluid" alt="logo">
+                        <p class="mt-3">Subscribe to our newsletter to get updates about our grand offers.</p>
+                        <div class="social-links">
+                            <ul class="d-flex justify-content-between list-unstyled mb-0">
+                                <li class="social" style="font-size: 2rem;">
+                                    <a href="#" style="color: orange;">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="social" style="font-size: 2rem;">
+                                    <a href="#" style="color: orange;">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="social" style="font-size: 2rem;">
+                                    <a href="#" style="color: orange;">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="social" style="font-size: 2rem;">
+                                    <a href="#" style="color: orange;">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-menu">
+                        <h3>Quick Link</h3>
+                        <ul class="list-unstyled">
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">About us</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Offer</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Services</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-menu">
+                        <h3>Help Center</h3>
+                        <ul class="list-unstyled">
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">FAQs</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Payment</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Returns & Refunds</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Checkout</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Delivery Information</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div>
+                        <h3>Our Newsletter</h3>
+                        <p class="mt-3 text-c">Please send your email here and we will quickly respond to all requests and questions. Thank you for trusting our service.</p>
+                        <div class="search-bar border rounded-pill border-dark-subtle px-2">
+                            <form action="" class="d-flex align-items-center">
+                                <input type="text" class="form-control border-0 bg-transparent" placeholder="Enter your email here">
+                                <button type="submit" class="btn btn-link text-dark p-0 m-0">
+                                    <i class="fa fa-paper-plane" style="color: orange;"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>@2024 Pet Shop</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled d-flex text-dark">
+                        <li class="menu-item">
+                            <a href="#" class="nav-link text-dark">Home</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="nav-link text-dark">Shop</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="nav-link text-dark">Blog</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="nav-link text-dark">Contact</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="nav-link text-dark">Others</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Isotope  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

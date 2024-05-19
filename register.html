@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <img src="image/logo.png" class="img-fluid" alt="Logo">
+                </div>
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <input class="form-control border border-warning" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-warning" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div style="font-size: 2rem;">
+                                        <i class="fa-solid fa-phone" style="color: orange;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <strong>Contact</strong> <br>
+                                    0868387111
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div style="font-size: 2rem;">
+                                        <i class="fa-solid fa-envelope" style="color: orange;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <strong>Email</strong> <br>
+                                    trang@gmail.com
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Menu -->
+    <section style="background-color: bisque;">
+        <div class="container">
+            <div class="row">
+                <!-- Shop by Category Dropdown -->
+                <div class="col-md-3 col-sm-6 text-dark d-flex align-items-center">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shop by Category
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Cat</a>
+                        <a class="dropdown-item" href="#">Dog</a>
+                        <a class="dropdown-item" href="#">Bird</a>
+                    </div>
+                </div>
+                <!--  Main Navigation Menu -->
+                <div class="col-md-6 col-sm-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand d-none" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-dark" aria-current="page"
+                                        href="./index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="#">Shop</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark" href="#" id="pagesDropdown"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Pages
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                        <a class="dropdown-item" href="#">About Us</a>
+                                        <a class="dropdown-item" href="#">Wishlist</a>
+                                        <a class="dropdown-item" href="#">Checkout</a>
+                                        <a class="dropdown-item" href="#">Cart</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="#">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="#">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" href="#">Others</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled text-dark font-weight-bold" aria-disabled="true">GET
+                                        PRO</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- User Icons -->
+                <div class="col-md-3 col-sm-6 d-flex justify-content-between">
+                    <div class="d-flex justify-content-between">
+                        <a href="" class="position-relative d-flex align-items-center mx-3">
+                            <span style="font-size: 1.5rem;color: orange;">
+                                <i class="fa-regular fa-heart"></i>
+                            </span>
+                        </a>
+                        <a href="" class="position-relative d-flex align-items-center mx-3">
+                            <i class="fa-solid fa-cart-shopping" style="font-size: 1.5rem;color: orange;"></i>
+                        </a>
+                        <a href="./login.html" class="position-relative d-flex align-items-center mx-3">
+                            <i class="fa-regular fa-user" style="font-size: 1.5rem;color: orange;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login -->
+    <section class="login">
+        <div class="container py-3">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-xl-10">
+                    <div class="card" style="border-radius: 1rem;">
+                        <div class="row g-0">
+                            <div class="col-md-6 col-lg-5 d-none d-md-block">
+                                <img src="image/login1.jpg" alt="login form" class="img-fluid"
+                                    style="border-radius: 1rem 0 0 1rem;" />
+                            </div>
+                            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                                <div class="card-body p-4 p-lg-5 text-black">
+                                    <form>
+                                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your
+                                            account</h5>
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="form2Example17">Name</label>
+                                            <input type="text" id="form2Example17" class="form-control form-control-lg" placeholder="Name" />
+                                        </div>
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="form2Example17">Email address</label>
+                                            <input type="email" id="form2Example17" class="form-control form-control-lg"
+                                                placeholder="Email" />
+
+                                        </div>
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="form2Example27">Password</label>
+                                            <input type="password" id="form2Example27"
+                                                class="form-control form-control-lg" placeholder="Password" />
+                                        </div>
+                                        <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="form2Example27">Repeat Password</label>
+                                            <input type="password" id="form2Example27"
+                                                class="form-control form-control-lg" placeholder="Password" />
+                                        </div>
+                                        <div class="pt-1 mb-4">
+                                            <button data-mdb-button-init data-mdb-ripple-init
+                                                class="btn btn-dark btn-lg btn-block text-dark" type="button"
+                                                style="background-color: bisque;">Sign in</button>
+                                        </div>
+
+
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-dark py-4 my-3" style="background-color: bisque;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-menu">
+                        <img src="image/logo2.png" class="img-fluid" alt="logo">
+                        <p class="mt-3">Subscribe to our newsletter to get updates about our grand offers.</p>
+                        <div class="social-links">
+                            <ul class="d-flex justify-content-between list-unstyled mb-0">
+                                <li class="social" style="font-size: 2rem;">
+                                    <a href="#" style="color: orange;">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="social" style="font-size: 2rem;">
+                                    <a href="#" style="color: orange;">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="social" style="font-size: 2rem;">
+                                    <a href="#" style="color: orange;">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="social" style="font-size: 2rem;">
+                                    <a href="#" style="color: orange;">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-menu">
+                        <h3>Quick Link</h3>
+                        <ul class="list-unstyled">
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">About us</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Offer</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Services</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer-menu">
+                        <h3>Help Center</h3>
+                        <ul class="list-unstyled">
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">FAQs</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Payment</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Returns & Refunds</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Checkout</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="nav-link text-dark">Delivery Information</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div>
+                        <h3>Our Newsletter</h3>
+                        <p class="mt-3 text-c">Please send your email here and we will quickly respond to all requests
+                            and questions. Thank you for trusting our service.</p>
+                        <div class="search-bar border rounded-pill border-dark-subtle px-2">
+                            <form action="" class="d-flex align-items-center">
+                                <input type="text" class="form-control border-0 bg-transparent"
+                                    placeholder="Enter your email here">
+                                <button type="submit" class="btn btn-link text-dark p-0 m-0">
+                                    <i class="fa fa-paper-plane" style="color: orange;"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>@2024 Pet Shop</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled d-flex text-dark">
+                        <li class="menu-item">
+                            <a href="#" class="nav-link text-dark">Home</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="nav-link text-dark">Shop</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="nav-link text-dark">Blog</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="nav-link text-dark">Contact</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="nav-link text-dark">Others</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Pills content -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Isotope  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+</body>
